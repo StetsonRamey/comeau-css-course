@@ -1,0 +1,125 @@
+* {
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Add styles here! */
+:root {
+  --primary-green: hsl(160, 100%, 30%);
+  --secondary-gold-light: hsl(45, 100%, 50%);
+  --secondary-gold-darker: hsl(45, 100%, 40%);
+  --gray-black: hsl(0, 0%, 0%);
+  --gray-veryDark: hsl(0, 0%, 10%);
+  --gray-dark: hsl(0, 0%, 30%);
+  --gray-medium: hsl(0, 0%, 40%);
+  --gray-light: hsl(0, 0%, 60%);
+  --gray-white: hsl(0, 0%, 100%);
+
+  --space-1: 8px;
+  --space-2: 16px;
+  --space-3: 24px;
+  --space-4: 32px;
+  --space-5: 48px;
+  --space-6: 64px;
+  --space-7: 96px;
+  --space-8: 128px;
+
+  --font-sm: 1rem;
+  --font-md: 1.25rem;
+  --font-lg: 1.5rem;
+  --font-xl: 2rem;
+}
+
+.intro-chunk,
+.card {
+  padding: 0 var(--space-3);
+}
+
+.intro-chunk {
+  padding-top: var(--space-8);
+  padding-bottom: var(--space-3);
+  border-bottom: var(--space-1) solid var(--gray-medium);
+}
+
+.intro-chunk h1 {
+  padding-bottom: var(--space-3);
+}
+
+.intro-chunk p {
+  font-size: var(--font-lg);
+  line-height: var(--font-xl);
+}
+
+.title {
+  font-size: var(--font-xl);
+}
+
+strong {
+  color: var(--primary-green);
+}
+
+main {
+  border-top: var(--space-7) solid var(--gray-light);
+}
+
+.indented-heading {
+  margin: 0;
+  margin-top: var(--space-1);
+  background-color: var(--secondary-gold-light);
+  padding: var(--space-3);
+  border-bottom: var(--space-1) solid var(--secondary-gold-darker);
+  margin-left: -24px;
+}
+
+.card p {
+  font-size: var(--font-md);
+  line-height: var(--font-xl);
+}
+
+@media screen and (min-width: 640px) {
+  .card {
+    border-bottom: var(--space-1) solid var(--gray-medium);
+  }
+
+  .indented-heading {
+    width: -moz-fit-content;
+    padding-right: var(--space-5);
+  }
+
+  section {
+    border-bottom: var(--space-7) solid var(--gray-light);
+  }
+}
+
+@media (min-width: 768px) {
+  .max-width-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .intro-chunk {
+    border-bottom: 0;
+  }
+
+  main {
+    padding: var(--space-8) 0;
+    border-top: var(--space-1) solid var(--gray-medium);
+    background-color: var(--gray-light);
+  }
+
+  .card {
+    padding-top: var(--space-1);
+    background-color: #fff;
+    max-width: 800px;
+  }
+
+  .indented-heading {
+    margin-left: -48px;
+  }
+}
