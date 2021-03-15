@@ -10,6 +10,15 @@ body {
 }
 
 /* Add styles here! */
+h1, h2, h3 {
+  margin: 0;
+}
+
+html {
+  /* base font size */
+  font-size: 18px;
+}
+
 :root {
   --primary-green: hsl(160, 100%, 30%);
   --secondary-gold-light: hsl(45, 100%, 50%);
@@ -72,9 +81,9 @@ main {
   margin: 0;
   margin-top: var(--space-1);
   background-color: var(--secondary-gold-light);
-  padding: var(--space-3);
   border-bottom: var(--space-1) solid var(--secondary-gold-darker);
-  margin-left: -24px;
+  padding: var(--space-3);
+  margin-left: calc(-1 * var(--space-3));
 }
 
 .card p {
@@ -82,7 +91,7 @@ main {
   line-height: var(--font-xl);
 }
 
-@media screen and (min-width: 640px) {
+@media (min-width: 640px) {
   .card {
     border-bottom: var(--space-1) solid var(--gray-medium);
   }
@@ -99,12 +108,13 @@ main {
 
 @media (min-width: 768px) {
   .max-width-wrapper {
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto;
   }
 
   .intro-chunk {
     border-bottom: 0;
+    max-width: 500px;
   }
 
   main {
@@ -115,11 +125,12 @@ main {
 
   .card {
     padding-top: var(--space-1);
-    background-color: #fff;
+    background-color: var(--gray-white);
     max-width: 800px;
   }
 
   .indented-heading {
-    margin-left: -48px;
+    padding-left: var(--space-5);
+    margin-left: calc(-1 * var(--space-5));
   }
 }
